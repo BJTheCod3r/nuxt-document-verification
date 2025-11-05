@@ -1,0 +1,7 @@
+{
+  "description": "Enter the document ID to verify its authenticity.",
+  "requiredIdError": "Document ID is required",
+  "verificationFailedError": "Failed to verify document",
+  "generalError": "An error occurred while verifying the document",
+  "missingConfigError": "Document verification configuration is missing."
+}

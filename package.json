@@ -1,0 +1,75 @@
+{
+  "name": "nuxt-document-verification",
+  "version": "0.1.0",
+  "description": "A reusable Nuxt module for document verification",
+  "type": "module",
+  "main": "./dist/module.mjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/module.d.mts",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "types": "./dist/module.d.mts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build build",
+    "dev:playground": "nuxi dev playground",
+    "build:playground": "nuxi build playground",
+    "generate:playground": "nuxi generate playground",
+    "preview:playground": "nuxi preview playground",
+    "prepare:playground": "nuxi prepare playground",
+    "lint": "eslint . --ext .cjs,.js,.ts,.vue",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt-module",
+    "document",
+    "verification",
+    "certificate",
+    "document-verification"
+  ],
+  "author": "Bolaji Ajani <bolaji@bolaji.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxt/kit": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BJTheCod3r/nuxt-document-verification"
+  },
+  "homepage": "https://github.com/BJTheCod3r/nuxt-document-verification#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^1.0.2",
+    "@types/node": "^20.19.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-vue": "^4.4.0",
+    "@vue/test-utils": "^2.4.1",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "husky": "^9.1.6",
+    "jsdom": "^22.1.0",
+    "nuxt": "^3.19.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.6",
+    "vue-tsc": "^3.1.3"
+  }
+}

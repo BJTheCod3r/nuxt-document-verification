@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '08:00'
+      timezone: 'UTC'
+    allow:
+      - dependency-type: 'direct'
+      - dependency-type: 'direct-dev'
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore'
+      include: 'scope'
