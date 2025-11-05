@@ -1,5 +1,3 @@
-import '../../types/runtime-config'
-
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import type { DocumentVerificationConfig } from '../composables/types'
 import { DEFAULT_DOCUMENT_ID_PARAM } from '../composables/constants'

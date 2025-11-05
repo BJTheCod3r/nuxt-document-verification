@@ -10,6 +10,7 @@ import type {
   FieldType,
   ResolvedField,
 } from './types'
+import { HTTP_STATUS_CODE } from './types'
 import { readId, readDisplayAsset, readStringField, readBooleanFlag } from './utils'
 import {
   BASE_FIELD_DEFINITIONS,
