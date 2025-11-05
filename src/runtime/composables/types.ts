@@ -53,6 +53,7 @@ export interface DocumentVerificationConfig {
   verificationEndpoint: string
   backLink: string
   backLinkText: string
+  showBackLink?: boolean
   buttonColor: string
   buttonHoverColor: string
   fields?: FieldDefinition[]

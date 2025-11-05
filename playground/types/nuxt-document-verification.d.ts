@@ -1,9 +1,10 @@
-import type { DocumentVerificationConfig } from '../runtime/composables/types'
+import type { DocumentVerificationConfig } from '../../src/runtime/composables/types'
 
-declare module '@nuxt/schema' {
+declare module 'nuxt/schema' {
   interface NuxtConfig {
     documentVerification?: DocumentVerificationConfig
   }
+
   interface PublicRuntimeConfig {
     documentVerification: DocumentVerificationConfig
   }

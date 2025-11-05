@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   modules: ['../nuxt'],
   documentVerification: {
@@ -6,6 +8,7 @@ export default defineNuxtConfig({
     verificationEndpoint: '/api/verify-document',
     backLink: '/',
     backLinkText: 'Back to Home',
+    showBackLink: false,
     buttonColor: '#4f46e5',
     buttonHoverColor: '#4338ca',
     fields: [

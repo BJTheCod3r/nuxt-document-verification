@@ -32,6 +32,7 @@ export const useDocumentVerification = () => {
   const cfg = $documentVerification as DocumentVerificationConfig
   const route = useRoute()
   const documentIdParam = cfg.documentIdParam || DEFAULT_DOCUMENT_ID_PARAM
+  const showBackLink = cfg.showBackLink ?? true
   const showDocument = cfg.showDocument ?? true
   const displayTitle = cfg.displayTitle ?? 'Document Preview'
   const showDocumentTitle = cfg.showDocumentTitle ?? true
@@ -40,6 +41,7 @@ export const useDocumentVerification = () => {
   const resolvedConfig: DocumentVerificationConfig = {
     ...cfg,
     documentIdParam,
+    showBackLink,
     showDocument,
     showDocumentTitle,
     displayTitle,

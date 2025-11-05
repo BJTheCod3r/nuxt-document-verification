@@ -17,6 +17,7 @@ export default defineNuxtPlugin<{ documentVerification: DocumentVerificationConf
     }
 
     const documentIdParam = moduleConfig.documentIdParam ?? DEFAULT_DOCUMENT_ID_PARAM
+    const showBackLink = moduleConfig.showBackLink ?? true
     const showDocument = moduleConfig.showDocument ?? true
     const displayTitle = moduleConfig.displayTitle ?? 'Document Preview'
     const showDocumentTitle = moduleConfig.showDocumentTitle ?? true
@@ -26,6 +27,7 @@ export default defineNuxtPlugin<{ documentVerification: DocumentVerificationConf
     const normalizedConfig: DocumentVerificationConfig = {
       ...moduleConfig,
       documentIdParam,
+      showBackLink,
       showDocument,
       displayTitle,
       showDocumentTitle,
