@@ -1,5 +1,5 @@
 <template>
-  <div class="dv-footer">
+  <div v-if="showBackLink" class="dv-footer">
     <a :href="backLink" class="dv-footer__link">{{ backLinkText }}</a>
   </div>
 </template>
@@ -14,6 +14,10 @@ defineProps({
   backLinkText: {
     type: String,
     required: true,
+  },
+  showBackLink: {
+    type: Boolean,
+    default: true,
   },
 })
 </script>

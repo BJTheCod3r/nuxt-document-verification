@@ -1,5 +1,3 @@
-import './types/runtime-config'
-
 import { defineNuxtModule, createResolver, addComponent, addImportsDir, addPlugin } from '@nuxt/kit'
 import type { DocumentVerificationConfig } from './runtime/composables/types'
 import { BASE_FIELD_DEFINITIONS } from './runtime/composables/constants'
@@ -17,6 +15,7 @@ export default defineNuxtModule<DocumentVerificationConfig>({
     verificationEndpoint: '/api/verify-document',
     backLink: '/',
     backLinkText: 'Back to Home',
+    showBackLink: true,
     buttonColor: '#4f46e5',
     buttonHoverColor: '#4338ca',
     fields: BASE_FIELD_DEFINITIONS,

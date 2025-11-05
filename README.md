@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     documentIdParam: 'document_id',
     backLink: '/',
     backLinkText: 'Back to dashboard',
+    showBackLink: true,
     buttonColor: '#4f46e5',
     buttonHoverColor: '#4338ca',
     showDocument: true,
@@ -112,6 +113,7 @@ All response fields are treated as strings except the validity flag. If a status
 | `logo`                                                                                     | Logo URL displayed at the top of the page                                                | `/logo.png`              |
 | `verificationEndpoint`                                                                     | API endpoint that validates a document                                                   | **required**             |
 | `backLink` / `backLinkText`                                                                | Destination + label for the back button                                                  | `'/'` / `'Back to Home'` |
+| `showBackLink`                                                                             | Toggle visibility of the back button                                                     | `true`                   |
 | `buttonColor` / `buttonHoverColor`                                                         | Primary button colours                                                                   | `#4f46e5` / `#4338ca`    |
 | `fields`                                                                                   | Array describing the detail rows (label, key, type, optional resolver)                   | Built-in defaults        |
 | `showDocument`                                                                             | Toggle document image section (hides it entirely when `false`)                           | `true`                   |
@@ -152,6 +154,8 @@ Each field in `fields` accepts:
 Only fields that resolve to a non-empty value are rendered. `type: 'status'` also exposes `field.isValid` so you can style badges appropriately.
 
 When `showDocument` is `false`, the asset block is skipped altogether even if the API responds with a URL. Use `showDocumentTitle` to hide the heading while keeping the preview itself, or override `displayTitle` to customise the heading copy. Set `displayType` to `'image'` or `'pdf'` when you know the asset format; otherwise the component falls back to inferring it from the URL (still supporting PDF detection). The `displayField` can point to an image or a PDF; PDFs render inside the viewer with a fallback link.
+
+Turn off the footer back button entirely by setting `showBackLink: false`.
 
 ```ts
 documentVerification: {

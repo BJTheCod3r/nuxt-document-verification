@@ -30,7 +30,12 @@
       />
     </div>
 
-    <DocumentFooter :back-link="config.backLink" :back-link-text="config.backLinkText" />
+    <DocumentFooter
+      v-if="config.showBackLink !== false"
+      :back-link="config.backLink"
+      :back-link-text="config.backLinkText"
+      :show-back-link="config.showBackLink"
+    />
   </div>
 </template>
 

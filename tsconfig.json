@@ -8,6 +8,14 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
+
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "declarationMap": false,
+
+    "sourceMap": true,
+
     "paths": {
       "#app": ["./src/types/nuxt-app.d.ts"],
       "@nuxt/schema": ["./node_modules/nuxt/schema"],
@@ -15,5 +23,6 @@
       "nuxt/dist/app/*": ["./node_modules/nuxt/dist/app/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "playground"]
 }
